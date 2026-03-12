@@ -1,0 +1,8 @@
+.status-tag {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.exists { background: #4ade80; color: white; } /* Groen */
+.not-exists { background: #f87171; color: white; } /* Rood */
