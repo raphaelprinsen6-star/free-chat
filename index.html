@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeChat - Live</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="auth-screen" class="container">
+        <h1 id="auth-title">FreeChat</h1>
+        <p id="auth-desc">Meld je aan of log in</p>
+        
+        <input type="text" id="username" placeholder="Naam">
+        <input type="text" id="usernumber" placeholder="Nummer (Letters/Cijfers)">
+        
+        <button id="main-auth-btn" onclick="handleAuth()">Starten</button>
+        
+        <div class="switch-mode">
+            <p id="switch-text">Nog geen account?</p>
+            <a href="#" id="switch-link" onclick="toggleAuthMode()">Account aanmaken</a>
+        </div>
+    </div>
+
+    <div id="chat-interface" class="chat-container" style="display: none;">
+        <div class="sidebar">
+            <div class="sidebar-header">Contacten</div>
+            <div class="add-contact">
+                <input type="text" id="new-contact" placeholder="Nummer zoeken...">
+                <button onclick="addContact()">Zoek</button>
+            </div>
+            <div id="contact-list" class="contacts"></div>
+            <button onclick="logout()" class="logout-btn">Uitloggen</button>
+        </div>
+
+        <div class="main-chat">
+            <header id="chat-header">
+                <span id="display-name">FreeChat</span>
+                <button id="ghost-btn" onclick="toggleGhost()">Ghost Mode: <span id="ghost-status">UIT</span></button>
+            </header>
+            <div class="messages" id="message-box"></div>
+            <div class="input-area">
+                <input type="text" id="msg-input" placeholder="Typ een bericht...">
+                <button onclick="sendMessage()" id="send-btn">Stuur</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
